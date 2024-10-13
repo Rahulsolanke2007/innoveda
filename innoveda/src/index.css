@@ -1,0 +1,74 @@
+/* src/index.css */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container-full {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+/* src/index.css */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container-full {
+  padding-top: 70px; /* To prevent overlap with navbar */
+}
+
+.sidebar {
+  height: 100vh;
+  position: fixed;
+  top: 70px; /* Below the fixed navbar */
+  left: 0;
+  width: 250px;
+  background-color: #f8f9fa;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h4 {
+  margin: 20px;
+  color: #0d6efd; /* Professional blue color */
+  font-weight: 600;
+}
+
+.sidebar a {
+  padding: 15px 20px;
+  display: block;
+  color: #495057;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+  background-color: #e9ecef;
+  color: #0d6efd;
+}
+
+.dashboard-content {
+  margin-left: 250px; /* Same width as the sidebar */
+  padding: 30px;
+  min-height: 100vh;
+}
+
+.dashboard-content h2 {
+  color: #495057;
+  font-weight: 600;
+}
+/* src/styles/Sidebar.css */
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px; /* Hide off-screen */
+  }
+  .sidebar.open {
+    left: 0; /* Show sidebar */
+  }
+}
